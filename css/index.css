@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 14px;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,19 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    height: 140px;
+    width: 50%;
+    justify-content: flex-end;
+    margin-bottom: .4em;
+}
+
+header div.logo {
+    width: 80%;
+    float: right;
+}
+
+header div.logo img {
+    height: 60px;
+    margin-top: 5px;
 }
 
 main {
@@ -60,12 +72,15 @@ main .container .content-right {
 }
 
 footer {
-    display: flex;
     flex-direction: row;
     height: 62px;
     background: transparent linear-gradient(116deg, #5A5789 0%, #2D2C45 100%) 0% 0% no-repeat padding-box;
     border-radius: 4px;
     opacity: 1;
+    text-align: center;
+    font: normal normal bold 14px/20px Open Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
 }
 
 h1 {
@@ -119,6 +134,7 @@ button.button-primary {
     text-align: center;
     font-weight: 600;
     padding: 0 2em;
+    cursor: pointer;
 }
 
 .subtitle {
@@ -167,9 +183,40 @@ button.button-primary {
     overflow: hidden;
     width: 100%;
     max-width: 0;
+    scroll-behavior: smooth;
 }
+
+.carrousel .images .image {
+    box-shadow: 0px 3px 6px #2E2D2C66;
+    border: 2px solid #FFFFFF;
+    margin-right: 1em;
+}
+
 .carrousel .image img {
     height: 120px;
+}
+
+#mensagem {
+    text-align: center;
+    font: normal normal 600 16px/22px Open Sans;
+    letter-spacing: 0px;
+    color: #008768;
+    position: fixed;
+    top: 2px;
+    width: 384px;
+    height: 60px;
+    line-height: 60px;
+    background: #73E6CBCC 0% 0% no-repeat padding-box;
+    border: 2px solid #00B98E;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+}
+
+#mensagem-erro {
+    color: #E65562;
+    display: none;
 }
 
 @media (max-width: 800px) {
